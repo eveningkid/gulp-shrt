@@ -1,0 +1,1 @@
+"use strict";var gulp=require("gulp"),Plugin=require("./Plugin"),Task=require("./Task"),Watch=require("./Watch"),Short=require("./Short");module.exports=Short,module.exports.task=Task,module.exports.watch=Watch;

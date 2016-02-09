@@ -1,0 +1,1 @@
+"use strict";function Watch(t,u){return u&&(t=[[t,u]]),function(){!function(t){t.forEach(function(t){var u=t[1]instanceof Array?t[1]:[t[1]];gutil.log("Watching",t[0],u),gulp.watch(t[0],u)})}(t)}}var gulp=require("gulp"),gutil=require("gulp-util");module.exports=Watch;
