@@ -1,5 +1,6 @@
 var shrt = require("gulp-shrt")
-var sourcemaps = require('gulp-sourcemaps')
+var sourcemaps = require("gulp-sourcemaps")
+var del = require("del")
 
 var paths = {
 	scripts: ['client/js/**/*.coffee', '!client/external/**/*.coffee'],
