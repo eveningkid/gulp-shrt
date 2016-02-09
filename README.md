@@ -3,7 +3,7 @@ Make gulp syntax *shrt*er.
 
 ## Why?
 
-You might sometimes want to sep up your tasks quickly without using any generators.  
+You might sometimes want to quickly set up your tasks without using any generators.  
 
 Considering you want to use `gulp-sass` on a `style.scss` file:
 
@@ -155,7 +155,6 @@ Examples: `"clean"`, `["clean", "check"]`
 shrt.watch("*.js", "build")
 shrt.watch(["*.scss", "tmp/*.scss"], ["clean", "sass"])
 ```
----
 
 ## License
 
