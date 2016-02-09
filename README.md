@@ -1,5 +1,5 @@
 # gulp-shrt
-Making gulp syntax *shrt*er.
+Make gulp syntax *shrt*er.
 
 ## Why?
 
