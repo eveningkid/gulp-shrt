@@ -1,4 +1,4 @@
-var shrt = require("gulp-shrt");
+var shrt = require("gulp-shrt")
 var del = require("del")
 
 shrt.task("sass{clean}", "file.scss", [
