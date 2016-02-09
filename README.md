@@ -43,6 +43,8 @@ task("clean", function () {
 $ npm install --save gulp-shrt
 ```
 
+Don't forget that you need a `package.json` (initializable using `npm init`) file at the root of your project so then you can install `gulp-shrt`.
+
 ## How to use it?
 
 You can either consult examples (available in /examples) or read the following API.
@@ -62,8 +64,7 @@ Examples: `"*.js"`, `["lib/**/*.*", "*.css"]`
 - String:  `"command"` (without brackets) refers to the `"gulp-command"` module and will call its constructor **without arguments**.  
 Examples: `"sass"` will execute `.pipe(require("gulp-sass")())`.
 - Object: 
-	- **not using** module method: `{moduleName: args || [arg1,arg2,...]}` 
-    	- 
+	- **not using** module method: `{moduleName: args || [arg1,arg2,...]}`:  
         ```javascript
         {sass: {outputStyle: "compact"}}
         
@@ -72,9 +73,7 @@ Examples: `"sass"` will execute `.pipe(require("gulp-sass")())`.
         .pipe(require("gulp-sass")(
         	{outputStyle: "compact"}
         ))
-        ```
-        
-        - 
+        ```  
         ```javascript
         {module: [3, {foo: "bar"}]}
         
@@ -85,9 +84,8 @@ Examples: `"sass"` will execute `.pipe(require("gulp-sass")())`.
             {foo: "bar"}
         ))
         ```
-	- **using** module method: `{pipe: [moduleInstance.method, args]}`:
-    	- 
-        ```javascript
+	- **using** module method: `{pipe: [moduleInstance.method, args]}`:  
+    	```javascript
         var sourcemaps = require("gulp-sourcemaps")
         
         // later
@@ -97,7 +95,7 @@ Examples: `"sass"` will execute `.pipe(require("gulp-sass")())`.
         // will execute
         
         .pipe(sourcemaps.init())
-    	```
+    	```  
  
 - Array: `[..., ..., ...]` will evaluate each command either as a *String* or as an *Object*.  
 
@@ -113,6 +111,7 @@ shrt("*.babel.js", [
     "uglify"
 ], "build/js")
 ```
+---
 
 ### shrt.task(name, from, [cmds[, to]])
 
@@ -136,6 +135,7 @@ shrt.task("hello{clean}", "file.scss", "sass", "build")
 shrt.task("world", function () { ... })
 shrt.task("42", ["t.js", "lib/o.js"], ["babel", "uglify"], ".")
 ```
+---
 
 ### shrt.watch(src, tasks), shrt.watch([ [src, tasks], ... ]
 
@@ -155,6 +155,7 @@ Examples: `"clean"`, `["clean", "check"]`
 shrt.watch("*.js", "build")
 shrt.watch(["*.scss", "tmp/*.scss"], ["clean", "sass"])
 ```
+---
 
 ## License
 
