@@ -1,6 +1,6 @@
 {
   "name": "gulp-shrt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Make gulp syntax shorter",
   "main": "./lib/gulp-shrt.js",
   "directories": {
