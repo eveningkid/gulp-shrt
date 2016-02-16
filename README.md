@@ -10,6 +10,7 @@ Considering you want to use `gulp-sass` on a `style.scss` file:
 ```javascript
 var gulp = require("gulp")
 var sass = require("gulp-sass")
+var del = require("del")
 
 gulp.task("sass", ["clean"], function () {
 	return gulp.src("file.scss")
